@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "STAT": {
+      "commandName": "Project",
+      "commandLineArgs": "--stat"
+    },
+    "GUI": {
+      "commandName": "Project"
+    }
+  }
+}

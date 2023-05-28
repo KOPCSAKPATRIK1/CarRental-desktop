@@ -1,0 +1,23 @@
+﻿<Window x:Class="CarRental_desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarRental_desktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <DockPanel Margin="10">
+        <Button Click="torlesButton_Click" DockPanel.Dock="Top" Width="60" Height="20" Content="Torles" x:Name="torlesButton" HorizontalAlignment="Left" Margin="10"/>
+        <DataGrid x:Name="cars" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Rendszam" Binding="{Binding license_plate_number}"/>
+                <DataGridTextColumn Header="Makra" Binding="{Binding brand}"/>
+                <DataGridTextColumn Header="Model" Binding="{Binding model}"/>
+                <DataGridTextColumn Header="Napidij (Ft)" Binding="{Binding daily_cost}"/>
+            </DataGrid.Columns>
+          
+        </DataGrid>
+
+    </DockPanel>
+</Window>
